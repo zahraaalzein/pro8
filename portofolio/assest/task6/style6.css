@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.ramadan {
+    color: #187acf;
+    font-size: 30px;
+}
+.links{
+    display: flex;
+    list-style: none;
+    gap: 15px;}
+    .links a{
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #1a73e8;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 8px 20px;
+    font-size: 15px;
+}
+.links a:hover{
+    background-color: #1a73e8;
+    color: #ffff;
+}
+.links a:active{
+     background-color: #1a73e8;
+    color: #ffff;
+
+}
+.nav {
+    display: flex;
+    align-items: end;
+}
+.ramadan_ka h2{
+    color: #187acf;
+    font-size: 42px;
+    margin-bottom: 15px;}
+.ramadan_ka {
+    max-width: 500px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.imge{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+.imge img {
+    max-width: 380px;
+    height: auto;
+}
+.ramadan_ka p{
+    color:#666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.botom button {
+    background-color: transparent;
+    color: #1a73e8;
+    border-radius: 25px;
+    border: 2px  solid #1a73e8 ;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.botom button:hover{
+    background-color: #1a73e8;
+    color: #ffff;
+}
+.botom button:active{
+    background-color: #0d52b5;
+    border-color: #0d52b5;
+}
+@media (max_width:768px){
+    .header{
+        flex-direction:column ;
+        gap: 15px;
+        padding: 15px;
+    }
+    .links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ramadan_ka{
+        max-width: 100%;
+    }
+    .ramadan_ka h2{
+        font-size: 30px;
+    }
+    .imge{
+        width: 100%;
+        justify-content: center;
+    }
+    .imge img{
+        max-width: 250px;
+    }
+}

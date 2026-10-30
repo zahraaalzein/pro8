@@ -1,0 +1,832 @@
+
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e7a2c742;
+    color: #111;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.section {
+    padding-top: 55px;
+}
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+.header {
+    background: #f5cbe2;
+}
+
+.navbar {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fd3bc0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.hero-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.hero-content h3::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #f5cbe2;;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.hero-content h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    display: inline-block;
+    background:#f5cbe2;;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 12px;
+    color: #555;
+    margin: 25px 0;
+    max-width: 310px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f5cbe2;;
+    padding: 11px 25px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-frame {
+    width: 100%;
+    height: 300px;
+    background: #f293dd;
+    position: relative;
+}
+
+.image-frame::before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border: 1px solid #de1383;
+    top: -12px;
+    right: -12px;
+    z-index: 0;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.section-heading span {
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #ef79c6;
+    margin: 12px auto 0;
+}
+
+.left-heading {
+    text-align: left;
+}
+
+.left-heading span {
+    margin-left: 0;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    height: 180px;
+    background: #de73b0;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.service-image img {
+    height: 100%;
+    transition: 0.4s;
+}
+
+.service-image img:hover {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 11px;
+    color: #e9336f;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background: #fff;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-image {
+    padding: 30px;
+}
+
+.about-frame {
+    width: 100%;
+    height: 280px;
+    background: #f8c0d3;
+    position: relative;
+}
+
+.about-frame::before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border: 1px solid #ed2b9f;
+    top: -12px;
+    left: -12px;
+}
+
+.about-frame img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.about-content p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+}
+
+.feature i {
+    font-size: 22px;
+    color: #222;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    background: #fff;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 210px;
+    background: #d8d8d8;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.portfolio-item img:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.portfolio-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    border: 1px solid #f62dd1;
+    padding: 15px 12px;
+    min-height: 130px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #e207a0;
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.skill-card h3 {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    font-size: 9px;
+    color: #777;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    background: #f5b8d9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta-content h2 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.cta-buttons .btn {
+    background: #fff;
+    min-width: 140px;
+}
+
+.cta-buttons .btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand .job-title {
+    font-size: 11px;
+}
+
+.footer-brand p {
+    font-size: 9px;
+    margin-top: 25px;
+    color: #555;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.contact-item i {
+    font-size: 25px;
+    min-width: 25px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 23px;
+    }
+
+    .hero-content h3 {
+        font-size: 24px;
+    }
+
+    .image-frame {
+        height: 250px;
+    }
+
+    .services-grid {
+        gap: 15px;
+    }
+
+    .service-image {
+        height: 140px;
+    }
+
+    .about-frame {
+        height: 240px;
+    }
+
+    .portfolio-item img {
+        height: 180px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 576px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 40px;
+        gap: 35px;
+    }
+
+    .hero-content h3 {
+        font-size: 25px;
+    }
+
+    .hero-content h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .hero-content p {
+        margin: 20px auto;
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 16px;
+        font-size: 11px;
+    }
+
+    .hero-image {
+        padding: 10px;
+    }
+
+    .image-frame {
+        max-width: 330px;
+        height: 280px;
+    }
+
+    /* Section headings */
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    /* Services */
+
+    .services {
+        padding-top: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .service-card {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-card h3 {
+        font-size: 15px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    /* About */
+
+    .about {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+        gap: 35px;
+    }
+
+    .about-image {
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-frame {
+        height: 280px;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+
+    .about-content p {
+        font-size: 12px;
+    }
+
+    /* Portfolio */
+
+    .portfolio {
+        padding-top: 45px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portfolio-item {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .portfolio-item img {
+        height: 210px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 14px;
+    }
+
+    /* Skills */
+
+    .skills {
+        padding-top: 35px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skill-card {
+        min-height: 145px;
+        padding: 15px 10px;
+    }
+
+    .skill-card h3 {
+        font-size: 10px;
+    }
+
+    .skill-card p {
+        font-size: 9px;
+    }
+
+    /* CTA */
+
+    .cta {
+        padding: 35px 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 19px;
+    }
+
+    .cta-buttons {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .cta-buttons .btn {
+        min-width: 120px;
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    /* Footer */
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+        padding-top: 35px;
+    }
+
+    .footer-brand h2 {
+        font-size: 20px;
+    }
+
+    .footer-contact {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contact-item {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360){
+.logo {
+        font-size: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 21px;
+    }
+
+    .hero-buttons .btn {
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+   
+
